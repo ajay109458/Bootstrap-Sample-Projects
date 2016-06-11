@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Ristorante Con Fusion</title>
+
+        <!-- Adding bootstrap css files-->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/myStyle.css" rel="stylesheet">
+
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/bootstrap-social.css" rel="stylesheet">
+    </head>
+
+<body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+     <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+         });
+    </script>
+</body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+             <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" height=30 width=41></a>
+            </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"
+                                 aria-hidden="true"></span> Home</a></li>
+                            <li><a href="aboutus.html">
+                                <span class="glyphicon glyphicon-info-sign"
+                                 aria-hidden="true"></span> About</a></li>
+                            <li ><a href="contactus.html"><i class="fa fa-envelope"></i> Contact</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a data-toggle="modal" data-target="#loginModal">
+                                <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                            </li>
+                        </ul>
+                        
+                </div>
+            </div>
+    </nav> 
+
+     <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Login </h4>
+            </div>
+            <div class="modal-body">
+
+                <form class="form-inline" role="login">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-sm" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-sm" id="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="approve" value="">
+                            Remember Me
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-sm">SignIn</button>
+                        <button type="button" class="btn btn-default btn-sm"
+                          data-dismiss="modal">Cancel</button>
+                    </div>
+                     
+                </form>
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                
+                <h2>Medanta - The Medicity</h2>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8" >
+                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <a href="#">
+                                <img class="media-object img-thumbnail"
+                                 src="img/med1.jpg" alt="Medanta" >
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="row">
+                    <div class="col-sm-12"> 
+                        <p style="padding:20px;"></p> 
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#about" aria-controls="about"
+                                    role="tab" data-toggle="tab">About</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#review" aria-controls="review" role="tab"
+                                    data-toggle="tab">Review</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#facilities" aria-controls="facilities" role="tab"
+                                data-toggle="tab">Facilities</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#specialities" aria-controls="specialities" role="tab"
+                                data-toggle="tab">Specialities</a>
+                            </li>
+                        </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="about">
+                                    <h3>Medanta <small>Established in 2009</small></h3>
+                                    <p>Medanta – The Medicity is one of India's largest multi-super specialty institutes located in Gurgaon, a bustling town in the National Capital Region. Founded by eminent cardiac surgeon, Dr. Naresh Trehan. </p>
+                                    <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="review">
+                                    <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
+                                    <p>Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="facilities">
+                                      <ul class="list-unstyled">
+                                            <p><i class="fa fa-plus text-success"></i> Health check-up and screening packages. Minor trauma care with specialist services available 24 hours per day</p>
+                                            <p><i class="fa fa-plus text-success"></i> 7 days a week Emergency Department</p>
+                                            <p><i class="fa fa-plus text-success"></i> Fully-equipped providing primary and secondary careOutpatient and Inpatient ServicesRadiology 4D PET/CT  the latest advancement in diagnostic imagingDigital x-ray and ultrasound ECG</p>
+                                            <p><i class="fa fa-plus text-success"></i> 2D Echo Digital</p>
+					                        <p><i class="fa fa-plus text-success"></i> MammographyComprehensive pathology and lab services through our partner</p>
+					                        <p><i class="fa fa-plus text-success"></i> AmPath</p>
+                                       </ul>
+                                    
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="specialities">
+                                    <ul class="list-unstyled">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    Anesthesiology
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    Bariatric Surgery
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    Cardiology
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    Critical Care
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    Dentistry
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    Dermatology
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    Diabetology
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    ENT
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    ENT and Head and Neck Surgery
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    Gastroenterology
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    General Surgery
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    Internal Medicine
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    IVF and Infertility
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    Laparoscopic Surgery
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    Nephrology
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    Neuro Surgery
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    Neurology
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    Obstetricsand Gynaecology
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    Orthopedics
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    Pediatrics
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    Surgical Oncology
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    Urology 
+                                                </div>
+                                               
+                                            </div>
+                                            
+                                       </ul>
+                                </div>
+                            </div>
+                    </div>    
+                </div> 
+
+            </div>
+            <div class="col-x-12 col-sm-4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-primary ">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Address</h3>
+                            </div>
+                            <div class="panel-body">
+                                <address style="font-size: 100%">
+                               <i class="fa fa-map-marker"></i> 1129 Sector 46 Road, Gurgaon, India<br>
+                               <i class="fa fa-phone"></i>: +8152 1234 5678<br>
+                               <i class="fa fa-fax"></i>: +852 8765 4321<br>
+                               <i class="fa fa-laptop"></i>
+                                 <a href="www.medanta.com">Website</a><br>
+                               <i class="fa fa-envelope"></i>: 
+                                <a href="mailto:confusion@food.net">confusion@food.net</a>
+
+                           </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-primary ">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Rating</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="thumb-rating-overall color-average">
+                                    65%
+                                    <i class="fa fa-thump-up"></i>
+                                </div>
+                                <div class="rev-rating rating-input nopad_i">
+                                    <div class="" ="rev-rating rating-input nopad_i">
+                                        <i class="glyphicon glyphicon-star"></i>
+                                        <i class="glyphicon glyphicon-star"></i>
+                                        <i class="glyphicon glyphicon-star"></i>
+                                        <i class="glyphicon glyphicon-star"></i>
+                                        <i class="glyphicon glyphicon-star-empty"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    
+                                    <div class="col-sm-12">
+                                        <h4>Public Review</h4>
+                                    </div>
+                                       
+                                    
+                                    <div>
+                                        <div class="col-sm-2">
+                                            Excellent
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <div class="progress">
+                              
+                                              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                                              aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                                                29
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="col-sm-2">
+                                            Good
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <div class="progress">
+                              
+                                              <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40"
+                                              aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                                                 40
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="col-sm-2">
+                                            Average
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <div class="progress">
+                              
+                                              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="1"
+                                              aria-valuemin="0" aria-valuemax="5" style="width:20%">
+                                                104
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="col-sm-2">
+                                            Poor
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <div class="progress">
+                              
+                                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="4"
+                                              aria-valuemin="0" aria-valuemax="5" style="width:80%">
+                                                40
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="col-sm-2">
+                                            Wrost
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <div class="progress">
+                              
+                                              <div class="progress-bar progress-bar-danger  " role="progressbar" aria-valuenow="2"
+                                              aria-valuemin="0" aria-valuemax="5" style="width:40%">
+                                                12
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+
+                
+            </div>    
+
+            
+            
+        </div>
+
+    </div>
+
+</html>
