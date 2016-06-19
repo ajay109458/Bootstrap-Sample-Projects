@@ -1,0 +1,194 @@
+
+<div class="container" style="padding-top: 40px">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<h2>{{hospital.name}}</h2>
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-8">
+
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="media">
+						<div class="media-left media-middle">
+							<a href="#"> <img class="media-object img-thumbnail"
+								src="img/med1.jpg" alt="Medanta">
+							</a>
+						</div>
+						<div class="media-body"></div>
+					</div>
+				</div>
+			</div>
+
+
+		
+
+			<div class="row">
+				<div class="col-sm-12">
+					<p style="padding: 20px;"></p>
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="/reviewHospital/{{hospitalId}}/#tab-about"
+							aria-controls="about" role="tab" data-toggle="tab">About</a></li>
+						<li role="presentation"><a href="/reviewHospital/{{hospitalId}}/#tab-review"
+							aria-controls="tab-review" role="tab" data-toggle="tab">Review</a></li>
+						<li role="presentation"><a href="/reviewHospital/{{hospitalId}}/#facilities"
+							aria-controls="facilities" role="tab" data-toggle="tab">Facilities</a>
+						</li>
+						<li role="presentation"><a href="/reviewHospital/{{hospitalId}}/#specialities"
+							aria-controls="specialities" role="tab" data-toggle="tab">Specialities</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="tab-about">
+							<h3>
+								Medanta <small>Established in 2009</small>
+							</h3>
+							<p>Medanta – The Medicity is one of India's largest
+								multi-super specialty institutes located in Gurgaon, a bustling
+								town in the National Capital Region. Founded by eminent cardiac
+								surgeon, Dr. Naresh Trehan.</p>
+							<p>
+								<a class="btn btn-primary btn-xs" href="#">More &raquo;</a>
+							</p>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="tab-review">
+							<div ng-repeat="review in hospital.reviews">
+								<h3> {{review.rating}} Stars </h3>
+								<p> {{review.comment}}</p>
+								<cite>- {{review.author}}
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="facilities">
+							<ul class="list-unstyled">
+								<p ng-repeat="facility in hospital.facilies">
+									<i class="fa fa-plus text-success"></i> {{facility}}
+								</p>
+								
+							</ul>
+
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="specialities">
+							<ul class="list-unstyled">
+								<li ng-repeat="speciality in hospital.specilites">
+									{{speciality}}
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-x-12 col-sm-4">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary ">
+						<div class="panel-heading">
+							<h3 class="panel-title">Address</h3>
+						</div>
+						<div class="panel-body">
+							<address style="font-size: 100%">
+								<i class="fa fa-map-marker"></i> {{hospital.address.firstLine | lowercase }}<br>
+							  	{{hospital.address.city | lowercase }},{{hospital.address.state | lowercase }} - {{hospital.address.pincode}} <br>
+							    <i class="fa fa-phone"></i>: {{hospital.contactDetails.telephoneNumber}}<br>
+								<i class="fa fa-fax"></i>: {{hospital.contactDetails.hospitalFax}}<br>
+								<i class="fa fa-laptop"></i> <a href="{{hospital.contactDetails.hosptialWebSite}}"	>Website</a><br>
+								<i class="fa fa-envelope"></i>: <a
+									href="{{hospital.contactDetails.hospitalEmailId}}">Email</a>
+
+							</address>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary ">
+						<div class="panel-heading">
+							<h3 class="panel-title">Rating</h3>
+						</div>
+						<div class="panel-body">
+							<div class="thumb-rating-overall color-average">
+								65% <i class="fa fa-thump-up"></i>
+							</div>
+							<div class="rev-rating rating-input nopad_i">
+								<div class="" ="rev-rating rating-inputnopad_i">
+									<i class="glyphicon glyphicon-star"></i> <i
+										class="glyphicon glyphicon-star"></i> <i
+										class="glyphicon glyphicon-star"></i> <i
+										class="glyphicon glyphicon-star"></i> <i
+										class="glyphicon glyphicon-star-empty"></i>
+								</div>
+							</div>
+							<div>
+
+								<div class="col-sm-12">
+									<h4>Public Review</h4>
+								</div>
+
+
+								<div>
+									<div class="col-sm-2">Excellent</div>
+									<div class="col-sm-10">
+										<div class="progress">
+
+											<div class="progress-bar progress-bar-success"
+												role="progressbar" aria-valuenow="40" aria-valuemin="0"
+												aria-valuemax="100" style="width: 40%">29</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="col-sm-2">Good</div>
+									<div class="col-sm-10">
+										<div class="progress">
+
+											<div class="progress-bar progress-bar-primary"
+												role="progressbar" aria-valuenow="40" aria-valuemin="0"
+												aria-valuemax="100" style="width: 40%">40</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="col-sm-2">Average</div>
+									<div class="col-sm-10">
+										<div class="progress">
+
+											<div class="progress-bar progress-bar-info"
+												role="progressbar" aria-valuenow="1" aria-valuemin="0"
+												aria-valuemax="5" style="width: 20%">104</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="col-sm-2">Poor</div>
+									<div class="col-sm-10">
+										<div class="progress">
+
+											<div class="progress-bar progress-bar-warning"
+												role="progressbar" aria-valuenow="4" aria-valuemin="0"
+												aria-valuemax="5" style="width: 80%">40</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="col-sm-2">Wrost</div>
+									<div class="col-sm-10">
+										<div class="progress">
+
+											<div class="progress-bar progress-bar-danger  "
+												role="progressbar" aria-valuenow="2" aria-valuemin="0"
+												aria-valuemax="5" style="width: 40%">12</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
